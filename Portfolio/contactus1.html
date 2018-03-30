@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Contact Us</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="restaurantStyles.css"/>
+
+<style type = "text/css">
+	.formatcontainer
+		{
+			background-color:cornsilk;
+			color: black;
+		}
+	input, textarea, select
+		{
+			background-color: darkgrey;
+			color: white;
+		}
+	.toplabel, #inputname, #inputemail, #inputphone
+		{
+			font-weight: bold;
+		}
+	form	
+		{
+			text-align: center;
+		}
+	textarea
+		{
+			width:30%;
+			height: 90px;
+			vertical-align: top;
+		}
+</style>
+
+</head>
+
+<body>
+
+	<div class = "container">
+		<div class="header">
+			<header>Duck Soup</header>
+		</div>
+			<hr/>
+	
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="home1.html" target="_blank">Home</a></li>
+	  <li><a href="menu1.html" target="_blank">Menu</a></li>
+	  <li><a href="contactus1.html" target="_blank">Contact Us</a></li>
+	</ul>
+		<hr/>
+		<br/>
+		
+	<div class="formatcontainer">
+		<form>
+			<label for = "inputname" id= "inputname">Name:</label>
+				<input type = "text" name = "inputname" id = "inputname"><br/>
+			<label for = "inputemail" id= "inputemail">Email:</label>
+				<input type = "text" name = "inputemail" id = "inputemail"><br/>
+			<label for = "inputphone" id= "inputphone">Phone:</label>
+				<input type = "text" name = "inputphone" id = "inputphone">
+			<br/>
+			<br/>
+
+		<label for = "selectioninput" class= "toplabel"> Reason for Inquiry:</label>
+			<select>
+				<option value ="Catering" name="Selectioninput">Catering</option>
+				<option value ="Private Party" name="Selectioninput">Private Party</option>
+				<option value ="Feedback" name="Selectioninput">Feedback</option>
+				<option value ="Other" name="Selectioninput">Other</option>
+			</select>
+			<br/>
+			<br/>	
+
+		<label for="additionalinformation" class="toplabel">Additional Information</label>
+			<textarea id="additionalinformation" name="textareainput"></textarea>
+			<br/>
+			<br/>
+
+		<label for ="radioinput" class="toplabel">Have You Been to the Restaurant?</label>
+			<input type ="radio" name = "radioinput" value="No">No
+			<input type ="radio" name = "radioinput" value="Yes">Yes
+			<br/>
+			<br/>
+
+		<label for = "checkboxinput" class = "toplabel">Best Days to Contact You</label>
+			<label><input type="checkbox" value= "M" id="M" name="M">M</label>
+			<label><input type="checkbox" value= "T" id="T" name="T">T</label>
+			<label><input type="checkbox" value= "W" id="W" name="W">W</label>
+			<label><input type="checkbox" value= "Th" id="Th" name="Th">Th</label>
+			<label><input type="checkbox" value= "F" id="F" name="F">F</label>
+			<br/>
+			<br/>
+
+		<label for ="submit">
+			<input type ="submit" name ="submitinput" id= "submitinput" value="Send Request">
+
+		</form>
+			<br/>
+	</div>
+		<hr/>
+		
+<footer>
+	<p>Studio 56, Hollywood, CA 90210<br/>
+	316-911-9119<p>	
+</footer>
+		<hr/>
+
+</body>
+
+</html>

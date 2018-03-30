@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Lucky Sevens</title>
+<script>
+
+var playerMoney = 0;
+var maxMoney = 0;
+var maxMoneyRound = 0;
+var roundCounter = 0;
+var dice1;
+var dice2;
+var sumDice;
+
+
+function play() 
+{
+	playerMoney = document.getElementById("startingBet").value;
+   
+var startingMoney = playerMoney
+
+  /*console.log("playerMoney value after input = " + playerMoney );
+
+  console.log("%%%%%%%%%%%%%%%%%%%%%%" );*/
+  
+  if (playerMoney <= 0) 
+  {
+  	document.getElementById("enterMoney").innerHTML = "Look! You've screwed up the game. You need to enter an actual amount!";
+  }
+  
+  else
+  {
+  		document.getElementById("enterMoney").style.display = "none"
+  
+    while (playerMoney > .99)
+  {
+        dice1 = Math.ceil(Math.random() * 6);
+        dice2 = Math.ceil(Math.random() * 6);
+        sumDice = dice1 + dice2;
+        
+
+
+      if (playerMoney > maxMoney)
+       {
+         maxMoney = playerMoney;
+         maxMoneyRound = roundCounter;
+       }
+
+      if (sumDice == 7)
+        {
+          playerMoney=playerMoney-(-4);
+        }
+      else 
+        {
+          playerMoney-=1;
+        }  
+      roundCounter = roundCounter -(-1);
+
+      /*display variable values - comment out when not needed
+  console.log("roundcounter = " + roundcounter);
+  console.log("playermoney = " + playermoney);
+  console.log("dice1 = " + dice1);
+  console.log("dice2 = " + dice2 );
+  console.log("<br/>");
+  console.log("-----------------------");*/
+  };
+}
+
+document.getElementById("output1").innerHTML = startingMoney;
+document.getElementById("output2").innerHTML = maxMoney;
+document.getElementById("output3").innerHTML = maxMoneyRound;
+document.getElementById("output4").innerHTML = roundCounter;
+document.getElementById("playAgain").innerHTML = "Why not play again?";
+
+maxMoney=playerMoney;
+maxMoneyRound = 0;
+roundCounter =0;
+
+}
+
+</script>
+
+<style>
+body
+	{
+    	background-color: cornsilk;
+    }
+header
+	{
+    	font-weight: bold;
+        font-style: italic;
+        font-size: 30px;
+        color: tomato;
+        text-align: center;
+    }
+#enterMoney 
+    {
+    	font-weight:bold;
+        font-size: 20px;
+        
+    }
+/*.tableId
+	{
+    	display: none;
+    }*/
+
+table, th, td 
+	{
+		border: 1px dotted black;
+		padding: 5px 10px 5px 10px;
+		border-spacing: 2px 5px;
+        margin: auto;
+    }
+caption
+	{
+		font-weight: bold;
+        font-size: 20px;
+    }
+th
+	{
+    	font-weight: bold;
+        font-size: 15px;
+        color: white;
+        background-color: lightgray;
+    }
+tr
+	{
+    	background-color: lightgray;
+        font-size: 15px;
+    }
+#startingBet
+	{
+    	display: block;
+    	margin: auto;
+        
+    }
+.buttonHolder
+	{ 
+		text-align: center;
+        
+	}
+	
+
+</style>
+</head>
+
+
+<header>Lucky Sevens</header>
+
+
+<body>
+
+<p id = "enterMoney"></p>
+
+<input type="number" id="startingBet"/><br/>
+<div class= "buttonHolder">
+<button type="button" onclick=play(); id = "playAgain">Try it</button>
+</div>
+
+<div class="tableId">
+<hr/>
+<table>
+	<caption> Results </caption>
+    
+<th>
+Starting Bet
+</th>
+<th id = "output1">
+</th>
+</tr>
+<tr>
+<td>Highest Amount Won</td>
+<td id="output2"></td>
+</tr>
+<tr>
+<td>Roll Count at Highest Amount Won</td>
+<td id="output3"></td>
+</tr>
+<tr>
+<td>Total Rounds Before Going Broke</td>
+<td id="output4"></td>
+</tr>
+
+</table>
+</div>
+
+
+</body>
+</html>
