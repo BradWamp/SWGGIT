@@ -5,19 +5,22 @@
 	<title>Contact Us</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css"/>
-
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style type = "text/css">
-	.formatcontainer
+	
+	.formatcontainer, .container
 		{
 			background-color:cornsilk;
 			color: black;
+			border: 2px solid lightsteelblue;
 		}
 	input, textarea, select
 		{
 			background-color: darkgrey;
 			color: white;
 		}
-	.toplabel, #inputname, #inputemail, #inputphone
+	#inputname, #inputemail, #inputphone
 		{
 			font-weight: bold;
 		}
@@ -31,6 +34,7 @@
 			height: 90px;
 			vertical-align: top;
 		}
+	
 </style>
 
 </head>
@@ -44,25 +48,29 @@
 			<hr/>
 	
 	<ul class="nav nav-tabs">
-	  <li class="active"><a href="home1.html" target="_blank">Home</a></li>
+	  <li><a href="home1.html" target="_blank"><span class = "glyphicon glyphicon-home"></a></li>
 	  <li><a href="menu1.html" target="_blank">Menu</a></li>
-	  <li><a href="contactus1.html" target="_blank">Contact Us</a></li>
+	  <li class = "active"><a href="contactus1.html" target="_blank">Contact Us</a></li>
 	</ul>
 		<hr/>
 		<br/>
 		
 	<div class="formatcontainer">
 		<form>
+		<br/>
+		<h3>Please, Tell Us More.</h3><span>Use the following form to provide us with more information. </span>
+				<br/>
+				<br/>
 			<label for = "inputname" id= "inputname">Name:</label>
-				<input type = "text" name = "inputname" id = "inputname"><br/>
+				<input type = "text" name = "inputname" id = "inputname" required><br/>
 			<label for = "inputemail" id= "inputemail">Email:</label>
-				<input type = "text" name = "inputemail" id = "inputemail"><br/>
+				<input type = "text" name = "inputemail" id = "inputemail" required><br/>
 			<label for = "inputphone" id= "inputphone">Phone:</label>
-				<input type = "text" name = "inputphone" id = "inputphone">
+				<input type = "text" name = "inputphone" id = "inputphone" required>
 			<br/>
 			<br/>
 
-		<label for = "selectioninput" class= "toplabel"> Reason for Inquiry:</label>
+		<label for = "selectioninput" class= "toplabel" required> Reason for Inquiry:</label>
 			<select>
 				<option value ="Catering" name="Selectioninput">Catering</option>
 				<option value ="Private Party" name="Selectioninput">Private Party</option>
@@ -83,7 +91,7 @@
 			<br/>
 			<br/>
 
-		<label for = "checkboxinput" class = "toplabel">Best Days to Contact You</label>
+		<label for = "checkboxinput" class = "toplabel">Best Days to Contact You </label>
 			<label><input type="checkbox" value= "M" id="M" name="M">M</label>
 			<label><input type="checkbox" value= "T" id="T" name="T">T</label>
 			<label><input type="checkbox" value= "W" id="W" name="W">W</label>
@@ -94,7 +102,7 @@
 
 		<label for ="submit">
 			<input type ="submit" name ="submitinput" id= "submitinput" value="Send Request">
-
+			<br/>
 		</form>
 			<br/>
 	</div>

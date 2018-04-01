@@ -5,24 +5,32 @@
 		<title>Menu</title>
 			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 			<link rel="stylesheet" type="text/css" href="restaurantStyles.css"/>
-			
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style type = "text/css">
 	.menuHeader
 		{
 			font-weight: bold;
 			font-size: 20px;
+			color: lightsalmon;
 		}
 	.menuPrice
 		{
 			font-weight: bold;
-			font-style: italic;
 			font-size: 15px;
 			text-align: center;
 		}
-	.formatcontainer
+	.menuDescription
+		{
+			font-style: italic;
+		}
+	
+	.formatContainer, .container
 		{
 			background-color: cornsilk;
+			border: 2px solid lightsteelblue
 		}
+	
 	table, th, td
 		{
 			border: 1px solid black;
@@ -41,16 +49,19 @@
 		{
 			background-color: oldlace;
 			color: black;
+			font-weight: bold;
 		}
 	tr:nth-child(even)
 		{
-			background-color: tomato;
+			background-color: lightsalmon;
+			font-weight: bold;
 		}
 	table
 		{
 			margin-left: auto;
 			margin-right: auto;
 		}
+	
 </style>
 
 </head>
@@ -63,19 +74,19 @@
 			<hr/>
 	
 	<ul class="nav nav-tabs">
-	  <li class = "glyphicon-home"><a href="home1.html" target="_blank">Home</a></li>
-	  <li><a href="menu1.html" target="_blank">Menu</a></li>
+	  <li><a href="home1.html" target="_blank"><span class = "glyphicon glyphicon-home"></a></li>
+	  <li class="active"><a href="menu1.html" target="_blank">Menu</a></li>
 	  <li><a href="contactus1.html" target="_blank">Contact Us</a></li>
 	</ul>
 		<hr/>
 		<br/>
 		
-	<div class = "formatcontainer">
-		<div class="menuitems">	
+	<div class = "formatContainer">
+		<div class="menuItems">	
 			<div class = "row">	
 				<div class="col-md-4">
 					<p class ="menuHeader">Burger and Fries</p>
-					<p>An American Classic! your choice - with or without cheese, pickle, onion,
+					<p class = "menuDescription">An American Classic! your choice - with or without cheese, pickle, onion,
 					tomato, and lettuce served with our famous thick cut french fries.</p>
 					<p class = "menuPrice">$7.95</p>
 				<br/>
@@ -83,7 +94,7 @@
 				
 				<div class="col-md-4">
 					<p class ="menuHeader">Hot Dog and Chips</p>
-					<p>A summer classic! your choice - white or wheat bun, relish, mustard
+					<p class = "menuDescription">A summer classic! your choice - white or wheat bun, relish, mustard
 					and ketchup Served with our house-made chips.</p>
 					<p class = "menuPrice">$7.95</p>
 				<br/>
@@ -91,7 +102,7 @@
 				
 				<div class="col-md-4">
 					<p class ="menuHeader">Italian Sausage and Peppers</p>
-					<p>An all time favorite! your choice - mild or spicy cole slaw served
+					<p class = "menuDescription">An all time favorite! your choice - mild or spicy cole slaw served
 					with garlic mashers.</p>
 				<br/>
 					<p class = "menuPrice">$10.95</p>
@@ -102,7 +113,7 @@
 			<div class = "row">	
 				<div class="col-md-4">
 					<p class ="menuHeader">Tenderloin Sandwich and Chips</p>
-					<p>Really hits the Spot! Plain or seasame seed bun pickle, onion, tomato
+					<p class = "menuDescription">Really hits the Spot! Plain or seasame seed bun pickle, onion, tomato
 					and lettuce served with our house-made chips.</p>
 					<p class = "menuPrice">$8.95</p>
 				<br/>
@@ -110,7 +121,7 @@
 				
 				<div class="col-md-4">
 					<p class ="menuHeader">House Salad</p>
-					<p>On the lighter side Your choice - with or without cheese Iceberg lettuce, 
+					<p class = "menuDescription">On the lighter side Your choice - with or without cheese Iceberg lettuce, 
 					tomatoes, peppers, Thousand Island or Ranch Dressing served with a dinner roll.</p>
 					<p class = "menuPrice">$6.95</p>
 				<br/>				
@@ -118,9 +129,9 @@
 				
 				<div class="col-md-4">
 					<p class ="menuHeader">Brisket Sandwich and Fries</p>
-					<p>A taste of Texas! Smoked Brisket on thick-cut Texas Toast cole slaw served
+					<p class = "menuDescription">A taste of Texas! Smoked Brisket on thick-cut Texas Toast cole slaw served
 					with our famous thick-cut french fries.</p>
-				<br/>
+				
 					<p class = "menuPrice">$7.95</p>
 				</div>
 			</div>	
@@ -150,15 +161,17 @@
 				<td>$1.25</td>
 			</tr>
 		</table>
-	</div>		
+	</div>
+	
 		<hr/>
 		
 <footer>
 	<p>Studio 56, Hollywood, CA, 90210<br/>
 	316-911-9119<p>	
-</footer>
 	<hr/>
+</footer>
 
-	</div>	
+
+		
 </body>
 </html>
