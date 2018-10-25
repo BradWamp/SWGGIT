@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vending Machine</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/customesheet.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container">
+        <h1 class="text-center">Vending Machine</h1>
+        <hr/>
+      </div>
+
+          <div class="container">
+            <div class="col-md-8 left-sside">
+              <div id="itemBoxes"></div>
+            </div>
+
+
+        <div class="col-md-4 right-sside">
+
+          <div class="form1 text-center">
+            <form>
+              <label for"moneyInput">Total $ In</label><br>
+              <input class="form-control" type="float" readonly="readonly" id="moneyInput"/>
+              <button type="button" class="btn btn-default moneybutton" id="dollar">Add Dollar</button>
+              <button type="button" class="btn btn-default moneybutton" id="quarter">Add Quarter</button>
+              <button type="button" class="btn btn-default moneybutton" id="dime">Add Dime</button>
+              <button type="button" class="btn btn-default moneybutton" id="nickel">Add Nickel</button>
+            </form>
+            <br>
+            <hr/>
+          </div>
+          <hr/>
+
+          <div class="form2 text-center">
+            <hr/>
+            <form>
+              <div class="messages">
+                <label for"messageBox">Messages</label><br>
+                <input class="form-control" type=text readonly="readonly" id="messageBox" /><br/>
+              </div>
+
+              <div class="items">
+                <div class="form-inline">
+                  <label for"Item">Item</label>
+                  <input class="form-control" type="text" readonly="readonly" id="itemNumber" />
+                  <input type="hidden" id="itemPrice" />
+                  <input type="hidden" id="itemQuantity" />
+                </div>
+              </div>
+              <br>
+
+              <div class="vendButton">
+                <button type="button" class="btn btn-default" id="vendItem">Make Purchase</button>
+              </div>
+            </form>
+          </div>
+          <hr/>
+
+          <div class="form3 text-center">
+            <div class="vendingChange">
+              <label for"change">Change</label><br>
+              <input class="form-control" type=text readonly="readonly" id="change" /><br/>
+            </div>
+
+            <div class="changebutton">
+              <button type="button" class="btn btn-default" id="getChange">Change Return</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

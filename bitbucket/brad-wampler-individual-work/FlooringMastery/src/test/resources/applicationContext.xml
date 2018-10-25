@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+    <bean id="OrderDao" class="DAO.OrderDaoFileImpl"/>
+    
+    <bean id="OrderDaoStub" class="DAO.OrderDaoStubImpl"/>
+    
+    <bean id="AuditDaoStub" class="DAO.AuditDaoStubImpl"/>
+    
+    <bean id="ProductDao" class="DAO.ProductDaoFileImpl"/>
+    
+    <bean id="ProductDaoStub" class="DAO.ProductDaoStubImpl"/> 
+    
+    <bean id="TaxDao" class="DAO.TaxDaoFileImpl"/>
+    
+    <bean id="TaxDaoStub" class="DAO.TaxDaoStubImpl"/>
+    
+    <bean id="OrderService" class="Service.OrderServiceImpl">
+        <constructor-arg ref="OrderDaoStub"/>
+        <constructor-arg ref="AuditDaoStub"/>
+    </bean>
+    
+    <bean id="ProductService" class="Service.ProductServiceImpl">
+        <constructor-arg ref="ProductDaoStub"/>
+    </bean>
+    
+    <bean id="TaxService" class="Service.TaxServiceImpl">
+        <constructor-arg ref="TaxDaoStub"/>
+    </bean>
+    
+</beans>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dvd Library Page</title>
+        <link href="css/bootstrap.css"
+              rel="stylesheet">
+    </head>
+    <body>
+      <div class="container">
+        <br>
+        <div class="row">
+        <div class="btn-toolbar form-group">
+          <form class="form-inline" role="form">
+
+            <div>
+            <button type ="button" id="creatDvd" class="btn button-default col-md-1">
+              Create Dvd
+            </button>
+           </div>
+
+           <span class="col-md-3"> </span>
+
+          <div class="searchButton">
+            <button type ="button" id="searchDvd" class="btn button-default text-center">
+              Search
+            </button>
+          </div>
+
+          <span class="col-md-1"> </span>
+
+          <div class="searchDropdown">
+            <select id="searchSelect" class="form-control" required>
+              <option value="" disabled selected>Search Category</option>
+              <option value="title">Title</option>
+              <option value="release">Release</option>
+              <option value="director">Director</option>
+              <option value="rating">Rating</option>
+            </select>
+
+            <input type="text" class="form-control col-md-offset-1" id="searchWord"
+                placeholder = "Search Term" required/>
+          </div>
+
+        </form>
+        </div>
+        </div>
+    </div>
+    <hr/>
+
+  <div class="container">
+    <div class="content">
+      <table>
+        <div class="table-heading">
+          <thead>
+          <tr>
+            <th>Title</th>
+            <th>Release Date</th>
+            <th>Director</th>
+            <th>Rating</th>
+            <th> </th>
+
+          </tr>
+        </thead>
+        </div>
+
+        <div class="tableRows">
+          <tbody>
+          <tr>
+            <td>test</td>
+          </tr>
+        </tbody>
+        </div>
+
+      </table>
+    </div>
+  </div>
+
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

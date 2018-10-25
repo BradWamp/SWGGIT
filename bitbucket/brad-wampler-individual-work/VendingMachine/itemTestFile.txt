@@ -1,0 +1,4 @@
+banana::2.75::1::1
+apple::2.55::10::2
+granola bar::1.00::10::3
+snickers::3.00::9::4

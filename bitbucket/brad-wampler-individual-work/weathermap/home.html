@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Weather Page</title>
+        <link href="css/bootstrap.css"
+              rel="stylesheet">
+    </head>
+    <body>
+      <div class="container">
+        <div class="text-center"><h1>Weather Page</h1></div>
+
+        <div class="danger" id="zipWarning">
+        </div>
+        <hr/>
+
+        <form class="form-horizontal text-center" role="form">
+  <!-- may need to use form-inline to get them on the same line-->
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="zipcode" class="control-label">Zipcode</label>
+              <input type="number" class="form-control" id="zipcode"
+                placeholder = "Enter zipcode" maxlength="5" required/>
+
+              <label for="tempUnit" class="control-label">Units:</label>
+              <select id="tempUnit" class="form-control">
+                  <option value="imperial">Imperial</option>
+                  <option value="metric">Metric</option>
+              </select>
+
+              <button type="button" id="get-weather-button"
+                  class="btn btn-default">Get Weather
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <br/>
+
+      <div class="container" id="weatherInfo">
+        <div class="row">
+          <div id="cityName"></div>
+
+          <div class="test1 col-md-4" id = "currentDescription">
+          </div>
+          <div class="test2 col-md-4" id="cityConditions">
+          </div>
+        </div>
+
+        <div class="row">
+          <h1>FiveDayForecast</h1>
+        </div>
+          <div id = "info1" class="info1 col-md-2">
+          </div>
+          <div id= "info2" class="info2 col-md-2">
+          </div>
+          <div id= "info3" class="info3 col-md-2">
+          </div>
+          <div id ="info4" class="info4 col-md-2">
+          </div>
+          <div id=  "info5" class="info5 col-md-2">
+          </div>
+      </div>
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

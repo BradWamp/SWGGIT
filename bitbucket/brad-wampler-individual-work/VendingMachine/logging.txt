@@ -1,0 +1,12 @@
+2018-07-11T20:24:52.422 : purchaseItem: ID: 2 |Name: apple2
+2018-07-12T13:29:02.210 : purchaseItem: ID: 2 |Name: apple1.80
+2018-07-12T13:32:25.675 : purchaseItem: ID: 2 |Name: apple |Price: 2.55 |User Money 1.75
+2018-07-12T13:49:39.324 : purchaseItem: ID: 2 |Name: apple |Price: 2.55 |User Money 1Service.InsufficientFundsException: You only have $1 that isn't enough
+2018-07-12T13:55:05.871 : purchaseItem:  ID: 2 |Name: apple |Price: 2.55 |User Money  1Service.InsufficientFundsException: You only have $1 that isn't enough
+2018-07-12T13:57:05.464 : purchaseItem: ID: 2 |Name: apple |Price: 2.55 |User Money  0 Service.InsufficientFundsException: You only have $0 that isn't enough
+2018-07-12T14:04:29.544 : purchaseItem: ID: 1 |Name: banana |Price: 2.75 |User Money  :1 :Service.InsufficientFundsException: You only have $1 that isn't enough
+2018-07-12T14:10:45.420 : purchaseItem: ID: 1 |Name: banana |Price: 2.75 |User Money :0 :Service.InsufficientFundsException: You only have $0 that isn't enough
+2018-07-12T14:19:00.947 : purchaseItem: ID: 1 |Name: banana |Price: 2.75 |User Money :5 :Service.NoItemInventoryException: There is not enough inventory. Try again
+2018-07-17T17:04:22.708 : purchaseItem: ID: 1 |Name: banana |Price: 2.75 |User Money :5.00 :Service.NoItemInventoryException: There is not enough inventory. Try again
+2018-07-17T17:05:09.502 : purchaseItem: ID: 2 |Name: apple |Price: 2.55 |User Money :1.00 :Service.InsufficientFundsException: You only have $1.00 that isn't enough
+2018-07-17T17:06:59.796 : purchaseItem: ID: 1 |Name: banana |Price: 2.75 |User Money :1.00 :Service.InsufficientFundsException: You only have $1.00 that isn't enough
